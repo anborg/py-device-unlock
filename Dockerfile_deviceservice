@@ -1,0 +1,6 @@
+FROM python-zeep
+#COPY *.py /apps/deviceops/src/
+#COPY *.conf /apps/deviceops/src/
+#COPY *.sh /apps/deviceops/src/
+#COPY deviceservice /apps/deviceops/src/
+#CMD [ls -d /apps/deviceops/input/* | python /apps/deviceops/stream_device_ops.py]

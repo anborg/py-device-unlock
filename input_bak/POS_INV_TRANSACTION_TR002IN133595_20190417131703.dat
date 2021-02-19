@@ -1,0 +1,20 @@
+H|GW_Store|WCTR0102|TR002IN133595|20190417131703|2
+D|32|1|842776101150|10||1|EACH|357537081141285|
+D|42|2|842776101150|23||1|EACH|357537081140980|
+T|2
+2019-07-18 12:42:20,613 device          INFO     MainProcess 
+____________________________________________
+
+Calling LOCK:1 , unLOCK:1 for inputfile:C:/dev_space/pyp/device/logs/POS_INV_TRANSACTION_TR002IN133595_20190417131703.dat.log devices ####
+____________________________________________
+
+2019-07-18 12:42:20,616 zeep.transports DEBUG    MainProcess HTTP Post to http://dev.sonic.globalivewireless.local:3617/globalivewireless/service/devicemgmt/v1:
+<?xml version='1.0' encoding='utf-8'?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Body><ns0:LockDeviceRequest xmlns:ns0="http://freedom.ca/service/device"><ns1:submitter xmlns:ns1="http://freedom.ca/service/request"><ns1:channel>DIGITAL</ns1:channel></ns1:submitter><ns0:DeviceList><ns0:Device><ns0:imei>357537081140980</ns0:imei></ns0:Device></ns0:DeviceList></ns0:LockDeviceRequest></soap-env:Body></soap-env:Envelope>
+2019-07-18 12:42:20,785 zeep.transports DEBUG    MainProcess HTTP Response from http://dev.sonic.globalivewireless.local:3617/globalivewireless/service/devicemgmt/v1 (status: 200):
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><dev:LockDeviceResponse xmlns:dev="http://freedom.ca/service/device"><req:result xmlns:req="http://freedom.ca/service/request" env="dev" status="OK"/><dev:DeviceList><dev:Device><dev:imei>357537081140980</dev:imei><dev:carrierLockState>NOT_FOUND</dev:carrierLockState><dev:stateUpdateStatus>Failure</dev:stateUpdateStatus></dev:Device></dev:DeviceList></dev:LockDeviceResponse></soap:Body></soap:Envelope>
+2019-07-18 12:42:20,824 zeep.transports DEBUG    MainProcess HTTP Post to http://dev.sonic.globalivewireless.local:3617/globalivewireless/service/devicemgmt/v1:
+<?xml version='1.0' encoding='utf-8'?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Body><ns0:UnlockDeviceRequest xmlns:ns0="http://freedom.ca/service/device"><ns1:submitter xmlns:ns1="http://freedom.ca/service/request"><ns1:channel>DIGITAL</ns1:channel></ns1:submitter><ns0:DeviceList><ns0:Device><ns0:imei>357537081141285</ns0:imei></ns0:Device></ns0:DeviceList></ns0:UnlockDeviceRequest></soap-env:Body></soap-env:Envelope>
+2019-07-18 12:42:20,951 zeep.transports DEBUG    MainProcess HTTP Response from http://dev.sonic.globalivewireless.local:3617/globalivewireless/service/devicemgmt/v1 (status: 200):
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><dev:UnlockDeviceResponse xmlns:dev="http://freedom.ca/service/device"><req:result xmlns:req="http://freedom.ca/service/request" env="dev" status="OK"/><dev:DeviceList><dev:Device><dev:imei>357537081141285</dev:imei><dev:carrierLockState>NOT_FOUND</dev:carrierLockState><dev:stateUpdateStatus>Failure</dev:stateUpdateStatus></dev:Device></dev:DeviceList></dev:UnlockDeviceResponse></soap:Body></soap:Envelope>

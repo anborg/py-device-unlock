@@ -1,0 +1,39 @@
+# in windows
+ pip freeze > requirements.txt
+ pip download --destination-directory zz_lib_archive     -r requirements.txt
+
+--only-binary=:all:
+--platform linux_x86_64
+
+
+copy the zz_lib_archive to other comp
+
+pip install --no-index --find-links=./zz_lib_archive -r requirements.txt
+
+
+
+pip install mypackage --no-index --find-links file:///srv/pkg/mypackage
+
+
+
+##### create virtual env
+
+python3.6 -m venv venv_device
+source venv_device/bin/activate
+# Now in venv shell
+py -m pip install --upgrade pip
+
+pip3.6 install --no-index --find-links=./zz_lib_archive -r requirements.txt
+source venv_device/bin/deactivate
+
+
+# check libxml
+yum list installed | grep libx
+
+ pip install --no-index --find-links=./zz_lib_archive zz_lib_archive/lxml-4.3.3.tgz
+
+
+docker save -o python-zeep.tar  python-zeep:latest
+docker load < python-zeep.tar
+docker images
+

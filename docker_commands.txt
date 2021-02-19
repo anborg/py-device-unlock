@@ -1,0 +1,1 @@
+docker run python-zeep /bin/bash -c "cd /path/to/somewhere; python a.py"
